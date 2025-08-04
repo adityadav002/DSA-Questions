@@ -20,7 +20,8 @@ int main()
     }
 
     s.push(x);
-    while(!tempStack.empty()){
+    while (!tempStack.empty())
+    {
         s.push(tempStack.top());
         tempStack.pop();
     }
