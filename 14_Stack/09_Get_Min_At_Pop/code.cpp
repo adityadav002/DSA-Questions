@@ -18,7 +18,7 @@ stack<int> _push(int arr[], int n)
 void _getMinAtPop(stack<int> s)
 {
     while (!s.empty()) {
-        cout << s.top() << " "; 
+        cout << s.top() << " ";
         s.pop();
     }
     cout << endl;
