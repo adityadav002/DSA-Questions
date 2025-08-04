@@ -6,12 +6,12 @@ using namespace std;
 
 class Solution {
 public:
-    vector<long long> nextLargerElement(vector<long long>& arr, int n) {
+    vector<long long> nextSmallerElement(vector<long long>& arr, int n) {
         vector<long long> ans(n, -1);
         stack<int> st;
 
         for (int i = 0; i < n; i++) {
-            while (!st.empty() && arr[st.top()] < arr[i]) {
+            while (!st.empty() && arr[st.top()] > arr[i]) {
                 ans[st.top()] = arr[i];
                 st.pop();
             }
@@ -28,9 +28,9 @@ int main() {
     vector<long long> arr = {4, 5, 2, 25};
     int n = arr.size();
 
-    vector<long long> result = sol.nextLargerElement(arr, n);
+    vector<long long> result = sol.nextSmallerElement(arr, n);
 
-    cout << "Next Greater Elements: ";
+    cout << "Next Smaller Elements: ";
     for (long long val : result) {
         cout << val << " ";
     }
