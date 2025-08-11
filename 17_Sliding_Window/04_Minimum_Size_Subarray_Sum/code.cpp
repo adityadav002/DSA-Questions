@@ -24,7 +24,7 @@ public:
 };
 
 int main()
-{
+{ 
     Solution sol;
 
     int target;
