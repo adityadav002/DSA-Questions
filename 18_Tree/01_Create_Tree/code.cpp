@@ -14,7 +14,7 @@ class Node
     }
 };
 
-int main()
+int main()  
 {
     int x, first, second;
     cout<<"Enter the root element: ";
