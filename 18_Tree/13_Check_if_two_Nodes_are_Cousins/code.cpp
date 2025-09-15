@@ -1,8 +1,6 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-
-// Definition for a binary tree node
 struct Node {
     int data;
     Node* left;
@@ -19,8 +17,8 @@ class Solution {
     bool isCousins(Node* root, int x, int y) {
         if (!root) return false;
 
-        queue<pair<Node*, Node*>> q; // (node, parent)
-        q.push(make_pair(root, (Node*)nullptr));  // fix: explicit nullptr type
+        queue<pair<Node*, Node*>> q; 
+        q.push(make_pair(root, (Node*)nullptr)); 
 
         while (!q.empty()) {
             int size = q.size();
@@ -40,9 +38,9 @@ class Solution {
             }
 
             if (parentX && parentY) {
-                return parentX != parentY; // Same level, different parent
+                return parentX != parentY; 
             } else if (parentX || parentY) {
-                return false; // One found without the other
+                return false; 
             }
         }
 

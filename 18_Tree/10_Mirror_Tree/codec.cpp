@@ -34,20 +34,6 @@ void inorderTraversal(Node* root) {
     inorderTraversal(root->right);
 }
 
-void levelOrder(Node* root) {
-    if (!root) return;
-    queue<Node*> q;
-    q.push(root);
-
-    while (!q.empty()) {
-        Node* curr = q.front();
-        q.pop();
-        cout << curr->data << " ";
-        if (curr->left) q.push(curr->left);
-        if (curr->right) q.push(curr->right);
-    }
-}
-
 int main() {
 
     Node* root = new Node(1);
